@@ -1,0 +1,49 @@
+<mat-tab-group>
+    <mat-tab label="Endereços">
+       <mat-form-field class="example-full-width" appearance="outline" >
+        <mat-label>CEP</mat-label>
+        <input matInput #input maxlength="9" [(ngModel)]="cep" required (blur)="consultaCep()">
+        <mat-hint style="align-items: flex-end;">{{input.value.length}}/9</mat-hint>
+       </mat-form-field>
+       
+       <mat-form-field class="example-full-width" appearance="outline" >
+          <mat-label>Rua</mat-label>
+          <input matInput [(ngModel)]="rua">
+         </mat-form-field>
+  
+         <mat-form-field class="example-full-width" appearance="outline" >
+          <mat-label>Bairro</mat-label>
+          <input matInput [(ngModel)]="bairro">
+         </mat-form-field>
+  
+         <mat-form-field class="example-full-width" appearance="outline" >
+          <mat-label>Cidade</mat-label>
+          <input matInput [(ngModel)]="cidade">
+         </mat-form-field>
+  
+         <mat-form-field class="example-full-width" appearance="outline" >
+          <mat-label>Estado</mat-label>
+          <input matInput [(ngModel)]="estado">
+         </mat-form-field>
+  
+         <mat-form-field class="example-full-width" appearance="outline" >
+         <mat-label>Número</mat-label>
+          <input matInput [(ngModel)]="num">
+         </mat-form-field>
+  
+         <mat-form-field class="example-full-width" appearance="outline" >
+         <mat-label>Complemento</mat-label>
+          <input matInput [(ngModel)]="complemento">
+         </mat-form-field>
+         
+         <mat-form-field class="example-full-width" appearance="outline" >
+         <mat-label>Ponto de referência</mat-label>
+          <input matInput [(ngModel)]="pontoRef">
+         </mat-form-field><br>
+  
+         <button mat-raised-button color="primary" (click)="addAddress()">Confirmar</button>
+  </mat-tab>
+</mat-tab-group><br>
+
+<button (click) = "cancel()"><mat-icon>clear</mat-icon></button>
+

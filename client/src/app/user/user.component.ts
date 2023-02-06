@@ -11,8 +11,8 @@ import { EditUserComponent } from '../edit-user/edit-user.component';
 })
 export class UserComponent implements OnInit {
   users : Array<any> = [];
-  user : string = "";
-  name : string = "";
+  user : string = "itsdanilo";
+  name : string = "chocolate";
   username : string = "";
   password : string = "";
   cpassword : string = "";
